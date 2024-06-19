@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/agreementCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:boxStrokeColor="@color/white"
+        app:cardBackgroundColor="#1E1E1E"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_26sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Fairness and Equity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <ImageView
+            android:id="@+id/back_button_recyclerview"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/white_forward_arrow" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/collapsibleContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/agreementCardView"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1E1E1E"
+            app:cardCornerRadius="@dimen/_7sdp"
+
+            >
+
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="Collapsible Content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

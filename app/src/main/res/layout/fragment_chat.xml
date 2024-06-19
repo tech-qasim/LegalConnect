@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_480sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatScreenFragment"
+    tools:context=".Fragments.ChatFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/_28sdp"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="13dp"
+            android:layout_centerVertical="true"
+
+            app:cardBackgroundColor="#1E1E1E">
+
+            <ImageView
+                android:id="@+id/profile_picture_chat_fragment"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/client_icon"
+                android:layout_gravity="center"
+                />
+
+
+
+
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/toolbarTitleChatFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/back_button"
+            android:text="Chats"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:textSize="@dimen/_11sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/button_log_out_client_chat_fragment"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/logout"
+            android:layout_alignParentEnd="true"/>
+
+        <LinearLayout
+            android:id="@+id/editTextContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/button_log_out_client_chat_fragment"
+            android:layout_below="@id/toolbarTitleChatFragment"
+            android:visibility="visible"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChatFragmentChatFragment"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="@dimen/_480sdp"
+        tools:listitem="@layout/recycler_item_layout_lawyer" />
+
+</RelativeLayout>

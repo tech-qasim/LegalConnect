@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313"
+    android:id="@+id/fragmentContainerLawyer"
+    tools:context=".Screens.Advocate">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_22sdp"
+        android:layout_marginRight="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:cardCornerRadius="13dp"
+            android:layout_centerVertical="true"
+
+            app:cardBackgroundColor="#1E1E1E">
+
+            <ImageView
+                android:id="@+id/profile_picture_lawyer"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/lawyer_icon"
+                android:layout_gravity="center"
+                />
+
+
+
+
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/back_button"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:textSize="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20sdp"/>
+
+        <ImageView
+            android:id="@+id/button_log_out"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/logout"
+            android:layout_alignParentEnd="true"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_stuff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_22sdp"
+        android:layout_marginRight="@dimen/_22sdp"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:id="@+id/hardCodedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:text="Welcome back,\nMr. Advocate"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:textSize="@dimen/_13sdp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/materialPassword"
+            android:layout_below="@+id/hardCodedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#1E1E1E"
+            android:layout_marginTop="@dimen/_18sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+            app:boxCornerRadiusTopStart="@dimen/_10sdp"
+            app:boxStrokeColor="#EABF4E"
+            app:hintTextColor="#EABF4E"
+            >
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_46sdp"
+                android:hint="Search"
+                android:imeOptions="actionNext"
+                android:drawableEnd="@drawable/search_icon"
+                android:singleLine="true"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/materialPassword"
+            tools:listitem="@layout/recycler_item_layout_lawyer"/>
+
+        </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313"
+    tools:context=".Screens.ChatScreen">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_28sdp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="13dp"
+                android:layout_centerVertical="true"
+
+
+                app:cardBackgroundColor="#1E1E1E">
+
+                <ImageView
+                    android:id="@+id/back_button_chat_screen"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/arrow_back"
+                    android:layout_gravity="center"
+                    />
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/back_button"
+                android:text="Client or Lawyer"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textSize="@dimen/_11sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_14sdp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:cardCornerRadius="13dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+
+                app:cardBackgroundColor="#1E1E1E">
+
+                <ImageView
+                    android:id="@+id/lawyer_or_client_image_chat_screen"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/client_icon"
+                    android:layout_gravity="center"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChatScreen"
+            android:layout_width="match_parent"
+            android:layout_height="462dp"
+            android:layout_above="@+id/textBox"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="0dp" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/no_messages_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/no_message_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:src="@drawable/no_messages_icon" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No messages yet"
+                android:textStyle="bold"
+                android:layout_below="@+id/no_message_icon"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/_16sdp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat_medium"/>
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/textBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:layout_alignParentBottom="true"
+            >
+
+<RelativeLayout
+    android:layout_gravity="center_vertical"
+    android:id="@+id/text_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.5"
+    android:background="@drawable/chat_screen_edittext"
+    android:layout_marginEnd="@dimen/_8sdp">
+
+    <EditText
+        android:id="@+id/message_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#00ffffff"
+        android:drawableEnd="@drawable/icon_link_file"
+        android:hint="Send a message"
+        android:padding="@dimen/_11sdp"
+        android:textColorHint="#4D4D4D"
+        android:visibility="visible" />
+    <RelativeLayout
+        android:id="@+id/document_layout"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:visibility="gone"
+        android:padding="@dimen/_11sdp">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/document_dark"
+            android:scaleType="centerCrop"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="#EABF4E"
+            android:indeterminate="true"
+            android:theme="@style/progressBarColor"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_8sdp"
+           android:layout_alignParentEnd="true"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:background="@drawable/icon_circle"
+                android:backgroundTint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/icon_cross"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_cross"
+                android:backgroundTint="@color/black" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+            <ImageView
+                android:id="@+id/send_button"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="@dimen/_54sdp"
+                android:src="@drawable/send_button"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

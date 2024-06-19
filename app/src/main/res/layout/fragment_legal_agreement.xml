@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#131313"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".Fragments.ChatFragment">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_28sdp"
+            >
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:cardCornerRadius="13dp"
+                    android:layout_centerVertical="true"
+
+                    app:cardBackgroundColor="#1E1E1E">
+
+                        <ImageView
+                            android:id="@+id/profile_picture_legal_agreement"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/client_icon"
+                            android:layout_gravity="center"
+                            />
+
+
+
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/back_button"
+                    android:text="Legal Doctrine"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_14sdp"/>
+
+                <ImageView
+                    android:id="@+id/searchButton"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/search_icon_with_card_view"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:id="@+id/editTextContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toLeftOf="@+id/searchButton"
+                    android:layout_below="@id/toolbarTitle"
+                    android:visibility="visible"
+                    />
+
+
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLegalAgreement"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/legal_agreement_item_layout" />
+
+
+</RelativeLayout>
+

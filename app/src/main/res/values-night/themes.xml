@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+     Base application theme.
+    <style name="Base.Theme.BlackSuits" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your dark theme here. -->
+
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">#131313</item>
+        <item name="android:navigationBarColor">#131313</item>
+
+    </style>
+
+    <style name="AppBottomNavigationView" parent="Widget.Design.BottomNavigationView">
+         <!-- Set your desired background color -->
+<!--        <item name="borderWidth">0dp</item>-->
+
+
+        <!-- Add other styling attributes if needed -->
+    </style>
+
+    <style name="progressBarColor">
+        <item name="colorAccent">@color/expanded_color</item>
+    </style>
+
+
+</resources>

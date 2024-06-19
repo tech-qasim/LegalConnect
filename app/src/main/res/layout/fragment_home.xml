@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbarHomeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_28sdp"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="13dp"
+                android:layout_centerVertical="true"
+
+                app:cardBackgroundColor="#1E1E1E">
+
+                <ImageView
+                    android:id="@+id/profile_picture_home_fragment"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/client_icon"
+                    android:layout_gravity="center"
+                    />
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/toolbarTitleChatFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/back_button"
+                android:text="Home"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textSize="@dimen/_11sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_14sdp"/>
+
+            <ImageView
+                android:id="@+id/button_log_out_client_home_fragment"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/logout"
+                android:layout_alignParentEnd="true"/>
+
+            <LinearLayout
+                android:id="@+id/editTextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@+id/button_log_out_client_home_fragment"
+                android:layout_below="@id/toolbarTitleChatFragment"
+                android:visibility="visible"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/materialPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="#1E1E1E"
+            android:layout_below="@+id/toolbarHomeFragment"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+            app:boxCornerRadiusTopStart="@dimen/_10sdp"
+            app:boxStrokeColor="#EABF4E"
+            app:hintTextColor="#EABF4E"
+            >
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchBarHomeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:drawableEnd="@drawable/search_icon"
+                android:hint="Search"
+                android:imeOptions="actionNext"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvSearchBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by:"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_below="@+id/materialPassword"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/tvSearchButtons"
+            android:layout_below="@+id/tvSearchBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:id="@+id/RadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_radio_button_background_not_selected"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Name" />
+
+                <RadioButton
+                    android:id="@+id/rbContact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/custom_radio_button_background_not_selected"
+                    android:text="Contact"/>
+
+                <RadioButton
+                    android:id="@+id/rbLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/radio_button_state"
+                    android:text="Location"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            android:layout_below="@+id/tvSearchButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.0"
+            android:stepSize="10.0"
+            android:valueTo="100.0"
+            android:value="30" />
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_below="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/recycler_item_layout_lawyer" />
+
+
+
+<!--        <RelativeLayout-->
+<!--            android:layout_below="@+id/tvSearchButtons"-->
+<!--            android:id="@+id/fragmentSearchByLocation"-->
+<!--            android:tag="fragmentContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#131313"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".Fragments.EditProfile">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="13dp"
+                android:layout_centerVertical="true"
+                app:cardBackgroundColor="#1E1E1E">
+
+                <ImageView
+                    android:id="@+id/back_button_view_profile"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/arrow_back"
+                    android:layout_gravity="center"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/toolbar_title_view_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/back_button"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:textSize="@dimen/_11sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_14sdp"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lawyer_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_42sdp"
+            android:layout_marginBottom="@dimen/_31sdp"
+            android:layout_below="@+id/toolbar">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="69dp"
+                android:layout_height="69sp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="@dimen/_13sdp">
+
+                <ImageView
+                    android:id="@+id/pfp_view_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/client_icon" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lawyer_icon">
+
+            <!-- Convert EditText to TextView -->
+            <RelativeLayout
+                android:id="@+id/ClientUsernameViewProfile"
+                android:layout_width="match_parent"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/hardCodedUsername"
+                    android:text="Username"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+                    <TextView
+                        android:id="@+id/tvClientUsernameViewProfile"
+                        android:text="Loading..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/LinearLayoutUsername"
+                    android:layout_centerVertical="true"
+                    >
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/EmailViewProfile"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/ClientUsernameViewProfile"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/hardCodedEmail"
+                        android:text="Email"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvEmailViewProfile"
+                        android:text="Loading..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="end"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iconCopyToClipboardEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/copy_to_clipboard"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+
+                        <ImageView
+                            android:id="@+id/iconSendEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/gotoemail" />
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/PhoneNumberViewProfile"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/EmailViewProfile"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/hardCodedPhoneNumber"
+                        android:text="Phone Number"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumberViewProfile"
+                        android:text="Loading..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/iconPhoneCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/phone_call_icon"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+                        <ImageView
+                            android:id="@+id/iconMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/small_message_icon"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/DesignationViewProfile"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/PhoneNumberViewProfile"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutDesignation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/hardCodedDesignation"
+                        android:text="Designation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDesignationViewProfile"
+                        android:text="Loading..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="end"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/iconDesignation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icondesignation"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LocationViewProfile"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/DesignationViewProfile"
+                android:background="@drawable/rounded_background"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_height="@dimen/_45sdp">
+
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/hardCodedLocation"
+                        android:text="Location"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLocationViewProfile"
+                        android:text="Loading..."
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:gravity="end"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/iconLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/locationiconviewprofile"
+
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

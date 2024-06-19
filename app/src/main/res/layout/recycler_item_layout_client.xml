@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@drawable/rounded_background"
+    android:layout_marginTop="@dimen/_10sdp">
+
+
+
+    <ImageView
+        android:id="@+id/profilePictureItem"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/client_icon_for_recycler_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_6sdp"/>
+
+    <LinearLayout
+        android:id="@+id/texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profilePictureItem"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_7sdp">
+        <TextView
+            android:id="@+id/clientTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+
+            android:text="Client 1"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_12sdp"
+            />
+
+        <TextView
+            android:id="@+id/lastMessageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+
+            android:text="Hi, how are you doing?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            tools:ignore="TextSizeCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timeStampView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:40 PM"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="@dimen/_9sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_9sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

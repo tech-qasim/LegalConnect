@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:forceDarkAllowed="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlackSuits"
+        tools:targetApi="31">
+        <activity
+            android:name=".Screens.ViewProfileScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.ChatScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.User"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".Screens.Advocate"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Screens.SigninAsClient"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NotNeeded.AdvocateScreen"
+            android:exported="false" />
+        <activity
+            android:name=".NotNeeded.UserScreen"
+            android:exported="false" />
+        <activity
+            android:name=".NotNeeded.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotNeeded.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.RecoverAccountScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.IdentifyYourselfScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SignUpAsLawyerScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SignUpAsClientScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Screens.SigninAsLawyer"
+            android:exported="false" />
+
+<!--        <service-->
+<!--            android:name=".Notifications.notifications"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+<!--        <service-->
+<!--            android:name=".Notifications.FirebaseMessagingService"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <service
+            android:name=".Notifications.NotificationService"
+            android:exported="false" />
+
+        <service
+            android:name=".Services.AppKillService"
+            android:stopWithTask="false" />
+
+        <service android:name=".Notifications.FCMNotificationReceiver"
+
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                    </intent-filter>
+        </service>
+
+
+    </application>
+
+
+
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:tag="fragmentLocation"
+    android:background="#131313"
+    tools:context=".Fragments.SearchByLocationFragment">
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/discreteSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0.0"
+        android:stepSize="10.0"
+        android:valueTo="100.0"
+        android:value="30" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewForSearchByLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/discreteSlider"
+        />
+
+
+
+</RelativeLayout>

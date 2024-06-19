@@ -1,0 +1,6 @@
+<!-- bg_bottom_nav_item_selected.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FF4081"/> <!-- Change color as needed -->
+    <corners android:radius="8dp"/> <!-- Adjust radius as needed -->
+</shape>
