@@ -1,5 +1,7 @@
 # LegalConnect
 
+![App Icon](https://github.com/tech-qasim/LegalConnect/blob/master/app/src/main/ic_launcher-playstore.png?raw=true)
+
 LegalConnect is an Android application designed to help users easily access legal resources, connect with legal professionals, and manage legal inquiries conveniently from their mobile devices.
 
 ## Features
